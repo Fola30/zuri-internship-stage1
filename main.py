@@ -1,10 +1,15 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def home():
+    return render_template('index.html')
+
+
+@app.route('/info')
+def info():
     return jsonify(slackUsername='Fola23', backend=True, age=19, bio="My name is Rasheed, i am a backend developer "
                                                                      "who's always excited to learn new things.")
 
