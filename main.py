@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
@@ -6,9 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return jsonify(slackUsername='Fola23', backend=True, age=19, bio="My name is Rasheed, i am a backend developer "
-                                                                     "who's always excited to learn new things...").json
-
-    # return render_template('index.html', data=data)
+                                                                     "who's always excited to learn new things...")
 
 
 if __name__ == '__main__':
